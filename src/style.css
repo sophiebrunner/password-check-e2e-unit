@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans";
+  height: 100%;
+  margin: 0;
+}
+
+@media screen and (min-width: 700px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  min-height: 100%;
+  background-color: lightsalmon;
+  margin: 0;
+}
+
+main {
+  margin: 0 auto;
+  margin-top: 2rem;
+  max-width: 300px;
+  display: grid;
+  justify-content: center;
+}
+
+@media screen and (min-width: 700px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    max-width: 600px;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-family: "Lobster";
+  color: white;
+  text-shadow: 2px 2px black;
+  font-size: 3rem;
+}
+
+main > * + * {
+  margin-top: 2rem;
+}
+
+.passwords {
+  max-width: 200px;
+  display: grid;
+  grid-row-gap: 0.5rem;
+  place-self: center;
+}
+
+input,
+button {
+  font-family: unset;
+  border-color: black;
+  border-radius: 2px;
+  outline: unset;
+}
+
+button {
+  background-color: black;
+  color: white;
+}
+
+.checks {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.checks > * + * {
+  margin-top: 0.5rem;
+}
+
+.checks__check::after {
+  content: " ";
+}
+
+.checks__check--failed::after {
+  content: " ❌";
+}
+
+.checks__check--success::after {
+  content: " ✅";
+}

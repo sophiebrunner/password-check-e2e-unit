@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Check</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Password Check</h1>
+    <main>
+      <form onsubmit="return false" class="passwords">
+        <input type="password" name="" id="pw1" data-cy="insert-password" />
+        <input type="password" name="" id="pw2" data-cy="insert-password" />
+        <button data-cy="toggle-password">Show Passwords</button>
+      </form>
+      <ul class="checks" data-cy="check-password">
+        <li id="equal" class="checks__check" data-cy="check-password-equal">
+          Passwords are equal
+        </li>
+        <li
+          id="lowercase"
+          class="checks__check"
+          data-cy="check-password-lowercase"
+        >
+          Lower Case Letters
+        </li>
+        <li
+          id="uppercase"
+          class="checks__check"
+          data-cy="check-password-uppercase"
+        >
+          Upper Case Letters
+        </li>
+        <li id="numbers" class="checks__check" data-cy="check-password-numbers">
+          Contains Numbers
+        </li>
+        <li id="length" class="checks__check" data-cy="check-password-length">
+          At least 10 characters long
+        </li>
+      </ul>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
