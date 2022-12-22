@@ -23,7 +23,6 @@ export function initApp() {
   const length = document.querySelector("#length");
   const numbers = document.querySelector("#numbers");
   const equal = document.querySelector("#equal");
-  const allTests = document.querySelectorAll(".checks__check");
 
   const btn = document.querySelector("button");
 
@@ -76,7 +75,7 @@ export function initApp() {
     setCheckStatus(numbers, containsNumbers(pw1));
     setCheckStatus(lowerCase, hasLowerCaseLetters(pw1));
     setCheckStatus(upperCase, hasUpperCaseLetters(pw1));
-    setCheckStatus(length, isLongEnough(pw1));
+    setCheckStatus(length, reachesMinimumLength(pw1));
   }
   inputPw1.addEventListener("keyup", checkPasswords);
   inputPw2.addEventListener("keyup", checkPasswords);

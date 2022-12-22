@@ -28,4 +28,6 @@ jobs:
       - run: npm ci # bei CI ist ci als Befehl üblich, s. package-lock.json (nutzt node packages zum gegebenen Zeitpunkt)
       # Run the command to start your dev server followed by the & sign
       # Run jest
+      - run: npm run devserver &
+      - run: npm run e2e
       - run: npm run test
