@@ -29,8 +29,3 @@ jobs:
       # Run the command to start your dev server followed by the & sign
       # Run jest
       - run: npm run test
-      - run: npm run devserver &
-      # Run the command for the e2e tests
-      - run: npm run e2e:ci
-      # Run the command for the unit tests
-      - run: npm run e2e:ci
