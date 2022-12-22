@@ -27,13 +27,13 @@ export function initApp() {
   const btn = document.querySelector("button");
 
   function changeType(pw, value) {
-    return pw.setAttribute("type", value);
+    return (pw.type = value);
   }
   function changeText(el, txt) {
     el.innerText = txt;
   }
   function isPassword(pw) {
-    return pw.getAttribute("type") === "password";
+    return pw.type === "password";
   }
   function toggleButton() {
     const isInputPassword = isPassword(inputPw1);
