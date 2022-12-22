@@ -10,7 +10,7 @@ import {
 
 test("arePasswordEqual should return false when passwords are not equal", () => {
   const result = arePasswordsEqual("abc", "123");
-  expect(result).toBe(true);
+  expect(result).toBe(false);
 });
 test("arePasswordEqual should return true when passwords are equal", () => {
   const result = arePasswordsEqual("abc", "abc");
